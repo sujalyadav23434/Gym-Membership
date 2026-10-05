@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fitzone Gym Membership</title>
+
+    <link rel="stylesheet" href="Membership.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <span>▮▮</span> FITZONE
+        </div>
+
+        <p>TRAIN • TRANSFORM • BELONG</p>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <!-- PAGE TITLE -->
+        <section class="page-heading">
+
+            <div class="red-line"></div>
+
+            <h1>
+                CHOOSE YOUR <span>MEMBERSHIP</span>
+            </h1>
+
+            <p>
+                Invest in yourself. Start your fitness journey today.
+            </p>
+
+        </section>
+
+
+        <!-- MEMBERSHIP PLANS -->
+        <section class="plans">
+
+
+            <!-- 1 MONTH -->
+            <div class="plan">
+
+                <h2>1 MONTH</h2>
+
+                <div class="price">
+                    ₹3,000
+                </div>
+
+                <p class="duration">
+                    Per Month
+                </p>
+
+                <ul>
+                    <li>Full Gym Access</li>
+                    <li>Modern Equipment</li>
+                    <li>Locker Facility</li>
+                    <li>Fitness Assessment</li>
+                </ul>
+
+                <button type="button" class="select-btn" onclick="selectPlan('1 Month', 3000)">
+                    SELECT PLAN
+                </button>
+
+            </div>
+
+
+            <!-- 6 MONTHS -->
+            <div class="plan popular">
+
+                <div class="popular-label">
+                    MOST POPULAR
+                </div>
+
+                <h2>6 MONTHS</h2>
+
+                <div class="price">
+                    ₹9,000
+                </div>
+
+                <p class="duration">
+                    For 6 Months
+                </p>
+
+                <ul>
+                    <li>Full Gym Access</li>
+                    <li>Modern Equipment</li>
+                    <li>Locker Facility</li>
+                    <li>Fitness Assessment</li>
+                    <li>Workout Guidance</li>
+                </ul>
+
+                <button type="button" class="select-btn" onclick="selectPlan('6 Months', 9000)">
+                    SELECT PLAN
+                </button>
+
+            </div>
+
+
+            <!-- 1 YEAR -->
+            <div class="plan">
+
+                <h2>1 YEAR</h2>
+
+                <div class="price">
+                    ₹12,000
+                </div>
+
+                <p class="duration">
+                    For One Year
+                </p>
+
+                <ul>
+                    <li>Full Gym Access</li>
+                    <li>Modern Equipment</li>
+                    <li>Locker Facility</li>
+                    <li>Fitness Assessment</li>
+                    <li>Workout Guidance</li>
+                    <li>Priority Support</li>
+                </ul>
+
+                <button type="button" class="select-btn" onclick="selectPlan('1 Year', 12000)">
+                    SELECT PLAN
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- MEMBERSHIP FORM -->
+        <section class="membership-form">
+
+            <div class="form-heading">
+
+                <div class="red-line"></div>
+
+                <h2>
+                    BECOME A <span>FITZONE</span> MEMBER
+                </h2>
+
+                <p>
+                    Fill in your details to register for your membership.
+                </p>
+
+            </div>
+
+
+            <form>
+
+
+                <!-- FULL NAME -->
+                <div class="form-group">
+
+                    <label for="name">
+                        FULL NAME
+                    </label>
+
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+
+                </div>
+
+
+                <!-- PHONE -->
+                <div class="form-group">
+
+                    <label for="phone">
+                        PHONE NUMBER
+                    </label>
+
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label for="email">
+                        EMAIL ADDRESS
+                    </label>
+
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+
+                </div>
+
+
+                <!-- AGE -->
+                <div class="form-group">
+
+                    <label for="age">
+                        AGE
+                    </label>
+
+                    <input type="number" id="age" placeholder="Enter your age" min="10" max="100" required>
+
+                </div>
+
+
+                <!-- GENDER -->
+                <div class="form-group">
+
+                    <label for="gender">
+                        GENDER
+                    </label>
+
+                    <select id="gender" required>
+
+                        <option value="">
+                            Select Gender
+                        </option>
+
+                        <option value="male">
+                            Male
+                        </option>
+
+                        <option value="female">
+                            Female
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MEMBERSHIP -->
+                <div class="form-group">
+
+                    <label for="membershipPlan">
+                        MEMBERSHIP PLAN
+                    </label>
+
+                    <select id="membershipPlan" onchange="updatePrice()" required>
+
+                        <option value="">
+                            Select Membership
+                        </option>
+
+                        <option value="3000">
+                            1 Month — ₹3,000
+                        </option>
+
+                        <option value="9000">
+                            6 Months — ₹9,000
+                        </option>
+
+                        <option value="12000">
+                            1 Year — ₹12,000
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ADDRESS -->
+                <div class="form-group full-width">
+
+                    <label for="address">
+                        ADDRESS
+                    </label>
+
+                    <input type="text" id="address" placeholder="Enter your address" required>
+
+                </div>
+
+
+                <!-- SELECTED PRICE -->
+                <div class="selected-membership">
+
+                    <div>
+                        <span>SELECTED MEMBERSHIP</span>
+                        <strong id="selectedPlan">
+                            Not Selected
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>TOTAL PRICE</span>
+                        <strong id="selectedPrice">
+                            ₹0
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit" class="submit-btn">
+
+                    COMPLETE REGISTRATION →
+
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>FITZONE</h3>
+
+        <p>
+            TRAIN • TRANSFORM • BELONG
+        </p>
+
+        <p>
+            © 2026 Fitzone Gym. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function selectPlan(plan, price) {
+
+            document.getElementById("membershipPlan").value = price;
+
+            document.getElementById("selectedPlan").innerText = plan;
+
+            document.getElementById("selectedPrice").innerText =
+                "₹" + price.toLocaleString("en-IN");
+
+            document.querySelector(".membership-form").scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+
+        function updatePrice() {
+
+            const select =
+                document.getElementById("membershipPlan");
+
+            const price =
+                Number(select.value);
+
+            const plan =
+                select.options[select.selectedIndex].text;
+
+
+            if (price) {
+
+                document.getElementById("selectedPlan").innerText =
+                    plan.split("—")[0].trim();
+
+                document.getElementById("selectedPrice").innerText =
+                    "₹" + price.toLocaleString("en-IN");
+
+            } else {
+
+                document.getElementById("selectedPlan").innerText =
+                    "Not Selected";
+
+                document.getElementById("selectedPrice").innerText =
+                    "₹0";
+
+            }
+
+        }
+    </script>
+    <!-- TRAINING SESSION POPUP -->
+
+    <div class="training-popup" id="trainingPopup">
+
+        <div class="training-box">
+
+            <!-- CLOSE BUTTON -->
+            <button class="training-close" id="trainingClose">
+            ×
+        </button>
+
+            <div class="training-header">
+
+                <div class="red-line"></div>
+
+                <h2>FITZONE TRAINING SESSIONS</h2>
+
+                <p>
+                    Choose the training session that suits your fitness goals.
+                </p>
+
+            </div>
+
+
+            <!-- TRAINING TABLE -->
+
+            <div class="training-table">
+
+                <div class="table-header">
+                    <span>TRAINING SESSION</span>
+                    <span>TRAINER</span>
+                    <span>FEE</span>
+                </div>
+
+
+                <!-- PERSONAL TRAINING -->
+
+                <div class="training-row">
+
+                    <span>
+                    Personal Training
+                </span>
+
+                    <span>
+                    Rahul
+                </span>
+
+                    <strong>
+                    ₹1,500
+                </strong>
+
+                </div>
+
+
+                <!-- STRENGTH -->
+
+                <div class="training-row">
+
+                    <span>
+                    Strength Training
+                </span>
+
+                    <span>
+                    Arjun
+                </span>
+
+                    <strong>
+                    ₹1,000
+                </strong>
+
+                </div>
+
+
+                <!-- CARDIO -->
+
+                <div class="training-row">
+
+                    <span>
+                    Cardio Training
+                </span>
+
+                    <span>
+                    Priya
+                </span>
+
+                    <strong>
+                    ₹800
+                </strong>
+
+                </div>
+
+
+                <!-- ZUMBA -->
+
+                <div class="training-row">
+
+                    <span>
+                    Zumba
+                </span>
+
+                    <span>
+                    Neha
+                </span>
+
+                    <strong class="free">
+                    FREE
+                </strong>
+
+                </div>
+
+
+                <!-- YOGA -->
+
+                <div class="training-row">
+
+                    <span>
+                    Yoga
+                </span>
+
+                    <span>
+                    Anjali
+                </span>
+
+                    <strong>
+                    ₹500
+                </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOOK SESSION -->
+
+            <button class="book-training">
+            BOOK A TRAINING SESSION →
+        </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        /* =========================
+                       TRAINING SESSION POPUP
+                    ========================= */
+
+        const trainingPopup =
+            document.getElementById("trainingPopup");
+
+        const trainingClose =
+            document.getElementById("trainingClose");
+
+
+        /* FIND TRAINING LINK */
+
+        const navigationLinks =
+            document.querySelectorAll("nav a");
+
+
+        navigationLinks.forEach(function(link) {
+
+            if (
+                link.textContent.trim() ===
+                "TRAINING"
+            ) {
+
+                link.addEventListener(
+                    "click",
+                    function(event) {
+
+                        event.preventDefault();
+
+                        trainingPopup.classList.add("show");
+
+                    }
+                );
+
+            }
+
+        });
+
+
+        /* CLOSE */
+
+        trainingClose.addEventListener(
+            "click",
+            function() {
+
+                trainingPopup.classList.remove("show");
+
+            }
+        );
+
+
+        /* CLOSE WHEN CLICKING OUTSIDE */
+
+        trainingPopup.addEventListener(
+            "click",
+            function(event) {
+
+                if (
+                    event.target ===
+                    trainingPopup
+                ) {
+
+                    trainingPopup.classList.remove("show");
+
+                }
+
+            }
+        );
+    </script>
+
+</body>
+
+</html>

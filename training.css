@@ -1,0 +1,287 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090909;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+.training-container {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.training-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: #e50914;
+}
+
+.red-line {
+    width: 55px;
+    height: 4px;
+    background: #e50914;
+    margin: 20px auto;
+}
+
+.training-header h1 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.training-header p {
+    color: #888;
+    font-size: 15px;
+}
+
+
+/* ================================
+   TRAINING GRID
+================================ */
+
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* ================================
+   TRAINING CARD
+================================ */
+
+.training-card {
+    position: relative;
+    background: #151515;
+    border: 1px solid #303030;
+    padding: 35px 25px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.training-card:hover {
+    transform: translateY(-7px);
+    border-color: #e50914;
+    box-shadow: 0 15px 40px rgba(229, 9, 20, 0.15);
+}
+
+
+/* ================================
+   ICON
+================================ */
+
+.icon {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+.training-card h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+
+/* ================================
+   TRAINER
+================================ */
+
+.trainer {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.trainer strong {
+    color: #ffffff;
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.description {
+    color: #888;
+    font-size: 13px;
+    line-height: 1.6;
+    min-height: 65px;
+}
+
+
+/* ================================
+   FEE
+================================ */
+
+.fee {
+    color: #e50914;
+    font-size: 28px;
+    font-weight: 900;
+    margin: 20px 0;
+}
+
+.fee span {
+    color: #777;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+
+/* ================================
+   FREE ZUMBA
+================================ */
+
+.free-card {
+    border-color: #22c55e;
+}
+
+.free-card:hover {
+    border-color: #22c55e;
+    box-shadow: 0 15px 40px rgba(34, 197, 94, 0.12);
+}
+
+.free-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #22c55e;
+    color: #000;
+    padding: 6px 15px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.fee.free {
+    color: #22c55e;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.training-card button {
+    width: 100%;
+    padding: 14px;
+    background: #e50914;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: 0.2s;
+}
+
+.training-card button:hover {
+    background: #ff1c2b;
+}
+
+.free-card button {
+    background: #22c55e;
+    color: #000;
+}
+
+.free-card button:hover {
+    background: #32e06c;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    text-align: center;
+    border-top: 1px solid #222;
+    margin-top: 60px;
+    padding-top: 30px;
+}
+
+.footer h3 {
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.footer p {
+    color: #666;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+    .training-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+    .training-container {
+        padding: 30px 0;
+    }
+    .training-header h1 {
+        font-size: 28px;
+    }
+    .training-header p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    .training-grid {
+        grid-template-columns: 1fr;
+    }
+    .training-card {
+        padding: 30px 20px;
+    }
+}

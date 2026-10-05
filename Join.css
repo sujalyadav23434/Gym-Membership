@@ -1,0 +1,345 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   MAIN PAGE
+================================ */
+
+.join-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* ================================
+   LEFT INFORMATION
+================================ */
+
+.join-info {
+    background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.9)), #111;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: #e50914;
+}
+
+.tagline {
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.red-line {
+    width: 55px;
+    height: 4px;
+    background: #e50914;
+    margin: 35px 0 25px;
+}
+
+.join-info h1 {
+    max-width: 550px;
+    font-size: 50px;
+    line-height: 1.05;
+    font-weight: 900;
+}
+
+.join-info h1 span {
+    display: block;
+    color: #e50914;
+}
+
+.info-text {
+    max-width: 500px;
+    color: #888;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+
+/* ================================
+   BENEFITS
+================================ */
+
+.benefits {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.benefits div {
+    color: #ddd;
+    font-size: 14px;
+}
+
+.benefits span {
+    color: #e50914;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+
+/* ================================
+   FORM AREA
+================================ */
+
+.form-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: #0d0d0d;
+}
+
+
+/* ================================
+   FORM CARD
+================================ */
+
+.form-card {
+    width: 100%;
+    max-width: 550px;
+    background: #151515;
+    border: 1px solid #303030;
+    padding: 40px;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ================================
+   FORM HEADING
+================================ */
+
+.form-heading {
+    margin-bottom: 30px;
+}
+
+.form-heading p {
+    color: #e50914;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.form-heading h2 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.form-heading span {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    color: #ccc;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    background: #0b0b0b;
+    border: 1px solid #333;
+    color: #ffffff;
+    padding: 13px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    border-radius: 0;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #e50914;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group select option {
+    background: #111;
+    color: #fff;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+button {
+    width: 100%;
+    padding: 17px;
+    background: #e50914;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff1c2b;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background: #555;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* ================================
+   MESSAGE
+================================ */
+
+.form-message {
+    display: none;
+    padding: 12px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.form-message.success {
+    display: block;
+    color: #22c55e;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.form-message.error {
+    display: block;
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+
+/* ================================
+   PRIVACY
+================================ */
+
+.privacy {
+    text-align: center;
+    color: #555;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 950px) {
+    .join-page {
+        grid-template-columns: 1fr;
+    }
+    .join-info {
+        padding: 50px 8%;
+    }
+    .join-info h1 {
+        font-size: 42px;
+    }
+    .form-area {
+        padding: 50px 8%;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+    .join-info {
+        padding: 40px 25px;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    .join-info h1 {
+        font-size: 32px;
+    }
+    .info-text {
+        font-size: 13px;
+    }
+    .form-area {
+        padding: 25px 15px;
+    }
+    .form-card {
+        padding: 28px 20px;
+    }
+    .form-heading h2 {
+        font-size: 28px;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

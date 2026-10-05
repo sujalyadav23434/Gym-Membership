@@ -1,0 +1,636 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090909;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    text-align: center;
+    padding: 45px 20px 30px;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: #e50914;
+}
+
+.header p {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+.container {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* ================================
+   PAGE HEADING
+================================ */
+
+.page-heading {
+    text-align: center;
+    padding: 55px 0 45px;
+}
+
+.red-line {
+    width: 55px;
+    height: 4px;
+    background: #e50914;
+    margin: 0 auto 18px;
+}
+
+.page-heading h1 {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.page-heading h1 span {
+    color: #e50914;
+}
+
+.page-heading p {
+    color: #888;
+    font-size: 16px;
+}
+
+
+/* ================================
+   MEMBERSHIP PLANS
+================================ */
+
+.plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 70px;
+}
+
+.plan {
+    background: #151515;
+    border: 1px solid #303030;
+    padding: 40px 25px 30px;
+    text-align: center;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.plan:hover {
+    transform: translateY(-8px);
+    border-color: #e50914;
+    box-shadow: 0 15px 40px rgba(229, 9, 20, 0.15);
+}
+
+
+/* POPULAR PLAN */
+
+.plan.popular {
+    border: 2px solid #e50914;
+}
+
+.popular-label {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e50914;
+    color: #fff;
+    padding: 7px 18px;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.plan h2 {
+    font-size: 21px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.price {
+    color: #e50914;
+    font-size: 43px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.duration {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 28px;
+}
+
+
+/* PLAN FEATURES */
+
+.plan ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.plan li {
+    color: #ccc;
+    font-size: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid #252525;
+}
+
+.plan li::before {
+    content: "✓";
+    color: #e50914;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+/* SELECT BUTTON */
+
+.select-btn {
+    width: 100%;
+    padding: 14px;
+    background: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.select-btn:hover {
+    background: #ff1c2b;
+    transform: scale(1.02);
+}
+
+
+/* ================================
+   MEMBERSHIP FORM
+================================ */
+
+.membership-form {
+    background: #151515;
+    border: 1px solid #303030;
+    padding: 45px;
+    margin-bottom: 70px;
+}
+
+.form-heading {
+    margin-bottom: 30px;
+}
+
+.form-heading .red-line {
+    margin: 0 0 15px;
+}
+
+.form-heading h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.form-heading h2 span {
+    color: #e50914;
+}
+
+.form-heading p {
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: #ddd;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    background: #0c0c0c;
+    border: 1px solid #3a3a3a;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #e50914;
+}
+
+.form-group select option {
+    background: #111;
+    color: #fff;
+}
+
+
+/* ================================
+   SELECTED MEMBERSHIP
+================================ */
+
+.selected-membership {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0c0c0c;
+    border-left: 4px solid #e50914;
+    padding: 20px 25px;
+}
+
+.selected-membership div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.selected-membership span {
+    color: #777;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.selected-membership strong {
+    font-size: 19px;
+    color: #fff;
+}
+
+.selected-membership div:last-child strong {
+    color: #e50914;
+    font-size: 25px;
+}
+
+
+/* ================================
+   SUBMIT BUTTON
+================================ */
+
+.submit-btn {
+    grid-column: 1 / -1;
+    padding: 17px;
+    background: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: 0.2s;
+}
+
+.submit-btn:hover {
+    background: #ff1c2b;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    text-align: center;
+    border-top: 1px solid #222;
+    padding: 40px 20px;
+    color: #666;
+}
+
+footer h3 {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 850px) {
+    .plans {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+    .header {
+        padding-top: 30px;
+    }
+    .logo {
+        font-size: 27px;
+    }
+    .page-heading {
+        padding-top: 40px;
+    }
+    .page-heading h1 {
+        font-size: 29px;
+        line-height: 1.2;
+    }
+    .page-heading p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .membership-form {
+        padding: 25px 18px;
+    }
+    .form-heading h2 {
+        font-size: 23px;
+    }
+    form {
+        grid-template-columns: 1fr;
+    }
+    .full-width {
+        grid-column: auto;
+    }
+    .selected-membership {
+        grid-column: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+    .submit-btn {
+        grid-column: auto;
+    }
+    .price {
+        font-size: 38px;
+    }
+}
+
+
+/* =================================
+   TRAINING POPUP
+================================= */
+
+.training-popup {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 99998;
+    overflow-y: auto;
+}
+
+
+/* OPEN */
+
+.training-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =================================
+   TRAINING BOX
+================================= */
+
+.training-box {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    background: #111;
+    border: 1px solid #333;
+    padding: 45px;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.7);
+    transform: translateY(30px);
+    transition: 0.3s ease;
+}
+
+.training-popup.show .training-box {
+    transform: translateY(0);
+}
+
+
+/* =================================
+   CLOSE BUTTON
+================================= */
+
+.training-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.training-close:hover {
+    color: #e50914;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.training-header {
+    margin-bottom: 30px;
+}
+
+.training-header .red-line {
+    width: 50px;
+    height: 4px;
+    background: #e50914;
+    margin-bottom: 15px;
+}
+
+.training-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.training-header p {
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* =================================
+   TRAINING TABLE
+================================= */
+
+.training-table {
+    width: 100%;
+    border: 1px solid #303030;
+}
+
+
+/* TABLE HEADER */
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    background: #e50914;
+    padding: 15px 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* TABLE ROW */
+
+.training-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 18px 20px;
+    background: #181818;
+    border-top: 1px solid #303030;
+    align-items: center;
+    font-size: 14px;
+}
+
+.training-row:hover {
+    background: #202020;
+}
+
+
+/* TRAINER */
+
+.training-row span:nth-child(2) {
+    color: #999;
+}
+
+
+/* PRICE */
+
+.training-row strong {
+    color: #e50914;
+    font-size: 16px;
+}
+
+.training-row .free {
+    color: #22c55e;
+}
+
+
+/* =================================
+   BOOK BUTTON
+================================= */
+
+.book-training {
+    width: 100%;
+    margin-top: 25px;
+    padding: 16px;
+    background: #e50914;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.book-training:hover {
+    background: #ff1c2b;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+    .training-box {
+        padding: 30px 18px;
+    }
+    .training-header h2 {
+        font-size: 22px;
+    }
+    .table-header {
+        grid-template-columns: 1.5fr 1fr 0.8fr;
+        padding: 12px 10px;
+        font-size: 10px;
+    }
+    .training-row {
+        grid-template-columns: 1.5fr 1fr 0.8fr;
+        padding: 15px 10px;
+        font-size: 12px;
+    }
+    .training-row strong {
+        font-size: 13px;
+    }
+}

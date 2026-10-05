@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join Fitzone</title>
+
+    <link rel="stylesheet" href="join.css">
+
+</head>
+
+
+<body>
+
+    <div class="join-page">
+
+        <!-- LEFT SIDE -->
+
+        <div class="join-info">
+
+            <div class="logo">
+                FIT<span>ZONE</span>
+            </div>
+
+            <p class="tagline">
+                TRAIN • TRANSFORM • BELONG
+            </p>
+
+            <div class="red-line"></div>
+
+            <h1>
+                YOUR STRONGEST
+                <span>SELF STARTS HERE.</span>
+            </h1>
+
+            <p class="info-text">
+                Join Fitzone today and get access to premium equipment, expert guidance and a community that keeps you motivated.
+            </p>
+
+            <div class="benefits">
+
+                <div>
+                    <span>✓</span> Modern Gym Equipment
+                </div>
+
+                <div>
+                    <span>✓</span> Free Trainer Guidance
+                </div>
+
+                <div>
+                    <span>✓</span> Annual Health Checkup
+                </div>
+
+                <div>
+                    <span>✓</span> Zumba Classes
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE FORM -->
+
+        <div class="form-area">
+
+            <div class="form-card">
+
+                <div class="form-heading">
+
+                    <p>WELCOME TO FITZONE</p>
+
+                    <h2>
+                        JOIN NOW
+                    </h2>
+
+                    <span>
+                        Fill in your details and we'll
+                        contact you shortly.
+                    </span>
+
+                </div>
+
+
+                <form id="joinForm">
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            FULL NAME
+                        </label>
+
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            PHONE NUMBER
+                        </label>
+
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" maxlength="10" required>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            EMAIL ADDRESS
+                        </label>
+
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    </div>
+
+
+                    <!-- AGE -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="age">
+                                AGE
+                            </label>
+
+                            <input type="number" id="age" name="age" placeholder="Age" min="10" max="100" required>
+
+                        </div>
+
+
+                        <!-- GENDER -->
+
+                        <div class="form-group">
+
+                            <label for="gender">
+                                GENDER
+                            </label>
+
+                            <select id="gender" name="gender" required>
+
+                                <option value="">
+                                    Select
+                                </option>
+
+                                <option value="Male">
+                                    Male
+                                </option>
+
+                                <option value="Female">
+                                    Female
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MEMBERSHIP -->
+
+                    <div class="form-group">
+
+                        <label for="membership">
+                            MEMBERSHIP PLAN
+                        </label>
+
+                        <select id="membership" name="membership" required>
+
+                            <option value="">
+                                Select your membership
+                            </option>
+
+                            <option value="1 Month - ₹3,000">
+                                1 Month — ₹3,000
+                            </option>
+
+                            <option value="6 Months - ₹9,000">
+                                6 Months — ₹9,000
+                            </option>
+
+                            <option value="1 Year - ₹12,000">
+                                1 Year — ₹12,000
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- ADDRESS -->
+
+                    <div class="form-group">
+
+                        <label for="address">
+                            ADDRESS
+                        </label>
+
+                        <textarea id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <div id="formMessage" class="form-message">
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button type="submit" id="submitButton">
+
+                        JOIN FITZONE →
+
+                    </button>
+
+                    <p class="privacy">
+                        Your information is kept private and used only for membership contact.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="join.js"></script>
+
+</body>
+
+</html>
